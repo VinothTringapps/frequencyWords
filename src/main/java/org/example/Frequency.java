@@ -7,10 +7,9 @@ import java.util.logging.Logger;
 
 public class Frequency {
     public static void main(String[] args) throws FileNotFoundException {
-        Countword cw=new Countword();
         Logger l =  Logger.getLogger("Frequency");
         Map<String,Integer> words=new HashMap<>();
-        cw.countWords("\\C:\\Users\\Tringapps-User20\\OneDrive\\Documents\\file.txt",words);
+        Countword.countWords("\\C:\\Users\\Tringapps-User20\\OneDrive\\Documents\\file.txt",words);
         l.log(Level.INFO,()->" "+ words);
         List<Map.Entry<String, Integer>> list = new ArrayList<>(words.entrySet());
         Collections.sort(list , new Comparator <Map.Entry<String, Integer>>(){

@@ -9,7 +9,7 @@ public class Frequency {
     public static void main(String[] args) throws FileNotFoundException {
         Logger l =  Logger.getLogger("Frequency");
         Map<String,Integer> words=new HashMap<>();
-        Countword.countWords("\\C:\\Users\\Tringapps-User20\\OneDrive\\Documents\\file.txt",words);
+        CountWord.countWords("\\C:\\Users\\Tringapps-User20\\OneDrive\\Documents\\file.txt",words);
         l.log(Level.INFO,()->" "+ words);
         List<Map.Entry<String, Integer>> list = new ArrayList<>(words.entrySet());
         Collections.sort(list , new Comparator <Map.Entry<String, Integer>>(){

@@ -4,14 +4,13 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
 
-public class Countword {
+public class CountWord {
     static void countWords(String fileName, Map<String, Integer> words) throws FileNotFoundException {
         Scanner file = new Scanner(new File(fileName));
         while (file.hasNext()) {
             String word = file.next();
 
             Integer count = words.get(word);
-//           System.out.println(word+"   "+count);
             if (count != null)
                 count++;
             else
